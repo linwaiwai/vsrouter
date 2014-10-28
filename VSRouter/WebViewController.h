@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebViewController.h
 //  VSRouter
 //
 //  Created by linwaiwai on 10/28/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "VSRouter.h"
-@interface ViewController : UIViewController
-
-
+@interface WebViewController : UIViewController
+-(void)loadURL:(NSString *)url ;
 @end
-

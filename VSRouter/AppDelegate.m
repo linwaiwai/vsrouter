@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "VSRegexRoute.h"
+#import "TestViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +16,16 @@
 
 @implementation AppDelegate
 
++(AppDelegate*)sharedInstance{
+    return [UIApplication sharedApplication].delegate ;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"} handler:^BOOL(NSDictionary *parameters) {
+//        return YES;
+//    }];
     return YES;
 }
 

@@ -14,6 +14,13 @@
 		A8DD989119FF4302007A8247 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD989019FF4302007A8247 /* Images.xcassets */; };
 		A8DD989419FF4302007A8247 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8DD989219FF4302007A8247 /* LaunchScreen.xib */; };
 		A8DD98A019FF4302007A8247 /* VSRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD989F19FF4302007A8247 /* VSRouterTests.m */; };
+		A8DD98B119FF431C007A8247 /* VSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98AA19FF431C007A8247 /* VSRouter.m */; };
+		A8DD98B219FF431C007A8247 /* VSRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98AC19FF431C007A8247 /* VSRoute.m */; };
+		A8DD98B319FF431C007A8247 /* VSRegexRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98AE19FF431C007A8247 /* VSRegexRoute.m */; };
+		A8DD98B419FF431C007A8247 /* VSComponentRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98B019FF431C007A8247 /* VSComponentRoute.m */; };
+		A8E6132519FF8F4500F42257 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132419FF8F4500F42257 /* TestViewController.m */; };
+		A8E6132819FF93BA00F42257 /* GeaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132719FF93BA00F42257 /* GeaModel.m */; };
+		A8E6132B19FFA07300F42257 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132A19FFA07300F42257 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,21 @@
 		A8DD989919FF4302007A8247 /* VSRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VSRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD989E19FF4302007A8247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8DD989F19FF4302007A8247 /* VSRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSRouterTests.m; sourceTree = "<group>"; };
+		A8DD98A919FF431C007A8247 /* VSRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRouter.h; sourceTree = "<group>"; };
+		A8DD98AA19FF431C007A8247 /* VSRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRouter.m; sourceTree = "<group>"; };
+		A8DD98AB19FF431C007A8247 /* VSRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRoute.h; sourceTree = "<group>"; };
+		A8DD98AC19FF431C007A8247 /* VSRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRoute.m; sourceTree = "<group>"; };
+		A8DD98AD19FF431C007A8247 /* VSRegexRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRegexRoute.h; sourceTree = "<group>"; };
+		A8DD98AE19FF431C007A8247 /* VSRegexRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRegexRoute.m; sourceTree = "<group>"; };
+		A8DD98AF19FF431C007A8247 /* VSComponentRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSComponentRoute.h; sourceTree = "<group>"; };
+		A8DD98B019FF431C007A8247 /* VSComponentRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSComponentRoute.m; sourceTree = "<group>"; };
+		A8DD98B519FF433D007A8247 /* VSMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSMacro.h; sourceTree = "<group>"; };
+		A8E6132319FF8F4500F42257 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		A8E6132419FF8F4500F42257 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		A8E6132619FF93BA00F42257 /* GeaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeaModel.h; sourceTree = "<group>"; };
+		A8E6132719FF93BA00F42257 /* GeaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeaModel.m; sourceTree = "<group>"; };
+		A8E6132919FFA07300F42257 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		A8E6132A19FFA07300F42257 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +103,9 @@
 		A8DD988219FF4301007A8247 /* VSRouter */ = {
 			isa = PBXGroup;
 			children = (
+				A8E6132C19FFA0A200F42257 /* Demo */,
+				A8E6132219FF8F1300F42257 /* VSRouter */,
+				A8DD98B519FF433D007A8247 /* VSMacro.h */,
 				A8DD988719FF4302007A8247 /* AppDelegate.h */,
 				A8DD988819FF4302007A8247 /* AppDelegate.m */,
 				A8DD988A19FF4302007A8247 /* ViewController.h */,
@@ -117,6 +142,34 @@
 				A8DD989E19FF4302007A8247 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8E6132219FF8F1300F42257 /* VSRouter */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6132619FF93BA00F42257 /* GeaModel.h */,
+				A8E6132719FF93BA00F42257 /* GeaModel.m */,
+				A8DD98A919FF431C007A8247 /* VSRouter.h */,
+				A8DD98AA19FF431C007A8247 /* VSRouter.m */,
+				A8DD98AB19FF431C007A8247 /* VSRoute.h */,
+				A8DD98AC19FF431C007A8247 /* VSRoute.m */,
+				A8DD98AD19FF431C007A8247 /* VSRegexRoute.h */,
+				A8DD98AE19FF431C007A8247 /* VSRegexRoute.m */,
+				A8DD98AF19FF431C007A8247 /* VSComponentRoute.h */,
+				A8DD98B019FF431C007A8247 /* VSComponentRoute.m */,
+			);
+			name = VSRouter;
+			sourceTree = "<group>";
+		};
+		A8E6132C19FFA0A200F42257 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6132319FF8F4500F42257 /* TestViewController.h */,
+				A8E6132419FF8F4500F42257 /* TestViewController.m */,
+				A8E6132919FFA07300F42257 /* WebViewController.h */,
+				A8E6132A19FFA07300F42257 /* WebViewController.m */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +272,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DD98B419FF431C007A8247 /* VSComponentRoute.m in Sources */,
+				A8E6132B19FFA07300F42257 /* WebViewController.m in Sources */,
+				A8DD98B319FF431C007A8247 /* VSRegexRoute.m in Sources */,
+				A8DD98B219FF431C007A8247 /* VSRoute.m in Sources */,
+				A8E6132819FF93BA00F42257 /* GeaModel.m in Sources */,
 				A8DD988C19FF4302007A8247 /* ViewController.m in Sources */,
 				A8DD988919FF4302007A8247 /* AppDelegate.m in Sources */,
 				A8DD988619FF4302007A8247 /* main.m in Sources */,
+				A8E6132519FF8F4500F42257 /* TestViewController.m in Sources */,
+				A8DD98B119FF431C007A8247 /* VSRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +474,7 @@
 				A8DD98A519FF4302007A8247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8DD98A619FF4302007A8247 /* Build configuration list for PBXNativeTarget "VSRouterTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +483,7 @@
 				A8DD98A819FF4302007A8247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

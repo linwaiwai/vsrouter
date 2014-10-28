@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestViewController.h
 //  VSRouter
 //
 //  Created by linwaiwai on 10/28/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "VSRouter.h"
-@interface ViewController : UIViewController
-
+@interface TestViewController : UIViewController
 
 @end
-
