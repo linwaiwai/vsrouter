@@ -14,13 +14,9 @@
 
 @protocol VSRouterViewController
 
-// 内部数据格式
--(Class)objectMapperClass;
-
-// 两个协议至少实现一个
-@optional
--(void)setObject:(id)object;
--(void)setObjects:(id)objects;
+@required
+-(Class)objectMapperClass;// 内部数据格式
+-(void)setObjects:(id)objects;// 内部的数据为对象，那么objects中只有一个
 
 @end
 

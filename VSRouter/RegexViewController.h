@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  RegexViewController.h
 //  VSRouter
 //
 //  Created by linwaiwai on 10/28/14.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VSRouter.h"
-@interface TestViewController : UIViewController<VSRouterViewController>
+#import "AppDelegate.h"
+@interface RegexViewController : UIViewController
 
 @end

@@ -53,6 +53,7 @@ static BOOL shouldDecodePlusSymbols = YES;
 @implementation VSComponentRoute
 
 
+// 从JLRoute拷贝部分代码
 - (NSDictionary*)match:(NSString *)url {
     NSDictionary *routeParameters = nil;
     NSURL *URL =  [NSURL URLWithString:url];

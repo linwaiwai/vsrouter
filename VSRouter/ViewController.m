@@ -21,7 +21,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [[VSRouter sharedInstance] route:@"http://baidu.com"];    
+//    [[VSRouter sharedInstance] route:@"http://baidu.com"];
+    [[VSRouter sharedInstance] route:@"/archive/23232/page/12121"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,25 +1,23 @@
 //
-//  TestViewController.m
+//  RegexViewController.m
 //  VSRouter
 //
 //  Created by linwaiwai on 10/28/14.
 //  Copyright (c) 2014 Vipshop Holdings Limited. All rights reserved.
 //
 
-#import "TestViewController.h"
-#import "AppDelegate.h"
-@interface TestViewController ()
+#import "RegexViewController.h"
+
+@interface RegexViewController ()
 
 @end
 
-@implementation TestViewController
-
-
+@implementation RegexViewController
 
 + (void)load{
-    VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controler/:action" handler:^BOOL(NSDictionary *parameters) {
+    __block VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"}  handler:^BOOL(NSDictionary *parameters) {
         
-        TestViewController *testViewController = [[TestViewController alloc] init];
+        RegexViewController *testViewController = [[RegexViewController alloc] init];
         UINavigationController *navigation = (UINavigationController*)[[AppDelegate sharedInstance].window rootViewController];
         [navigation pushViewController:testViewController animated:YES];
         return YES;

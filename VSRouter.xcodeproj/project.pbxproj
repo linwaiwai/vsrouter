@@ -19,8 +19,9 @@
 		A8DD98B319FF431C007A8247 /* VSRegexRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98AE19FF431C007A8247 /* VSRegexRoute.m */; };
 		A8DD98B419FF431C007A8247 /* VSComponentRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DD98B019FF431C007A8247 /* VSComponentRoute.m */; };
 		A8E6132519FF8F4500F42257 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132419FF8F4500F42257 /* TestViewController.m */; };
-		A8E6132819FF93BA00F42257 /* GeaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132719FF93BA00F42257 /* GeaModel.m */; };
 		A8E6132B19FFA07300F42257 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132A19FFA07300F42257 /* WebViewController.m */; };
+		A8E6132F19FFA59D00F42257 /* RegexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6132E19FFA59D00F42257 /* RegexViewController.m */; };
+		A8E6133219FFA91D00F42257 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6133119FFA91D00F42257 /* TestModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +59,12 @@
 		A8DD98B519FF433D007A8247 /* VSMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSMacro.h; sourceTree = "<group>"; };
 		A8E6132319FF8F4500F42257 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		A8E6132419FF8F4500F42257 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		A8E6132619FF93BA00F42257 /* GeaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeaModel.h; sourceTree = "<group>"; };
-		A8E6132719FF93BA00F42257 /* GeaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeaModel.m; sourceTree = "<group>"; };
 		A8E6132919FFA07300F42257 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		A8E6132A19FFA07300F42257 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		A8E6132D19FFA59D00F42257 /* RegexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexViewController.h; sourceTree = "<group>"; };
+		A8E6132E19FFA59D00F42257 /* RegexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexViewController.m; sourceTree = "<group>"; };
+		A8E6133019FFA91D00F42257 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		A8E6133119FFA91D00F42257 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +150,6 @@
 		A8E6132219FF8F1300F42257 /* VSRouter */ = {
 			isa = PBXGroup;
 			children = (
-				A8E6132619FF93BA00F42257 /* GeaModel.h */,
-				A8E6132719FF93BA00F42257 /* GeaModel.m */,
 				A8DD98A919FF431C007A8247 /* VSRouter.h */,
 				A8DD98AA19FF431C007A8247 /* VSRouter.m */,
 				A8DD98AB19FF431C007A8247 /* VSRoute.h */,
@@ -164,12 +165,24 @@
 		A8E6132C19FFA0A200F42257 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A8E6133319FFA92500F42257 /* Model */,
 				A8E6132319FF8F4500F42257 /* TestViewController.h */,
 				A8E6132419FF8F4500F42257 /* TestViewController.m */,
 				A8E6132919FFA07300F42257 /* WebViewController.h */,
 				A8E6132A19FFA07300F42257 /* WebViewController.m */,
+				A8E6132D19FFA59D00F42257 /* RegexViewController.h */,
+				A8E6132E19FFA59D00F42257 /* RegexViewController.m */,
 			);
 			name = Demo;
+			sourceTree = "<group>";
+		};
+		A8E6133319FFA92500F42257 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6133019FFA91D00F42257 /* TestModel.h */,
+				A8E6133119FFA91D00F42257 /* TestModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +288,9 @@
 				A8DD98B419FF431C007A8247 /* VSComponentRoute.m in Sources */,
 				A8E6132B19FFA07300F42257 /* WebViewController.m in Sources */,
 				A8DD98B319FF431C007A8247 /* VSRegexRoute.m in Sources */,
+				A8E6133219FFA91D00F42257 /* TestModel.m in Sources */,
 				A8DD98B219FF431C007A8247 /* VSRoute.m in Sources */,
-				A8E6132819FF93BA00F42257 /* GeaModel.m in Sources */,
+				A8E6132F19FFA59D00F42257 /* RegexViewController.m in Sources */,
 				A8DD988C19FF4302007A8247 /* ViewController.m in Sources */,
 				A8DD988919FF4302007A8247 /* AppDelegate.m in Sources */,
 				A8DD988619FF4302007A8247 /* main.m in Sources */,
