@@ -17,6 +17,7 @@
 + (void)load{
     __block VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"}  handler:^BOOL(NSDictionary *parameters) {
         
+        NSLog(@"%@", parameters);
         RegexViewController *testViewController = [[RegexViewController alloc] init];
         UINavigationController *navigation = (UINavigationController*)[[AppDelegate sharedInstance].window rootViewController];
         [navigation pushViewController:testViewController animated:YES];

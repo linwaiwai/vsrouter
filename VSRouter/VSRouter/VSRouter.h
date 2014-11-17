@@ -25,5 +25,5 @@
 + (VSRouter *)sharedInstance;
 -(void)addRoute:(VSRoute *)route ;
 - (void)route:(NSString *)urlPattern;
-
+- (void)route:(NSString *)urlPattern withParams:(NSDictionary *)aParams;
 @end

@@ -26,7 +26,7 @@ DECLARE_SINGLETON(VSRouter)
     return self;
 }
 
-- (void)route:(NSString *)urlPattern {
+- (void)route:(NSString *)urlPattern withParams:(NSDictionary *)aParams {
     NSString *scheme = nil;
     NSString *pattern = nil;
     if ([urlPattern rangeOfString:@"://"].location != NSNotFound) {
@@ -49,11 +49,15 @@ DECLARE_SINGLETON(VSRouter)
             
         }
         
-        NSDictionary* params = [route match:pattern];
+        NSMutableDictionary* params = [NSMutableDictionary dictionaryWithDictionary:[route match:pattern]];
+        if (aParams) {
+            [params addEntriesFromDictionary:aParams];
+        }
+        
         if ([params count] == 0) {
             continue ;
         }
-       
+        
         
         if (route.handler) {
             route.matched = urlPattern;
@@ -66,6 +70,10 @@ DECLARE_SINGLETON(VSRouter)
             continue ;
         }
     }
+}
+
+- (void)route:(NSString *)urlPattern {
+    [self route:urlPattern withParams:nil];
 }
 
 -(void)addRoute:(VSRoute *)route {
