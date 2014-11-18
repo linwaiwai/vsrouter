@@ -8,6 +8,8 @@
 
 #import "TestViewController.h"
 #import "AppDelegate.h"
+
+
 @interface TestViewController ()
 
 @end
@@ -17,13 +19,14 @@
 
 
 + (void)load{
-    VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controler/:action" handler:^BOOL(NSDictionary *parameters) {
+    VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controler/:action" handler:^BOOL(VSRoute *route) {
         
         TestViewController *testViewController = [[TestViewController alloc] init];
         UINavigationController *navigation = (UINavigationController*)[[AppDelegate sharedInstance].window rootViewController];
         [navigation pushViewController:testViewController animated:YES];
         return YES;
     }];
+//    route.excepted = [expectedClass]
     [[VSRouter sharedInstance] addRoute:route];
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VSRouter.h"
 #import "AppDelegate.h"
+#import "TestModel.h"
 @interface RegexViewController : UIViewController
 
 @end

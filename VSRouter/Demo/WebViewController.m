@@ -17,7 +17,7 @@
 @implementation WebViewController
 
 + (void)load{
-    __block VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"http://*" handler:^BOOL(NSDictionary *parameters) {
+    __block VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"http://*" handler:^BOOL(VSRoute *route) {
         
         WebViewController *testViewController = [[WebViewController alloc] init];
         UINavigationController *navigation = (UINavigationController*)[[AppDelegate sharedInstance].window rootViewController];

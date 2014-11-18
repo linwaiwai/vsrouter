@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "VSRegexRoute.h"
 #import "TestViewController.h"
-
+#import "VSRouter.h"
+#import "VSAutoMapObject.h"
 @interface AppDelegate ()
 
 @end
@@ -22,6 +23,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [VSRouter sharedInstance].mapper = (id)^(VSRoute *route,  NSDictionary *params){
+        id expected =  [route.expectedClass modelWithJson:params];
+        return expected;
+    };
+    
     // Override point for customization after application launch.
 //    VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"} handler:^BOOL(NSDictionary *parameters) {
 //        return YES;

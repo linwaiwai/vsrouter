@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VSAutoMapObject.h"
+@interface TestModel : NSObject <VSAutoMapDelegate>
 
-@interface TestModel : NSObject
+@property (nonatomic, strong )NSString * test;
 
 @end

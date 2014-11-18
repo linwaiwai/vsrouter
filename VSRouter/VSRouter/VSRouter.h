@@ -12,6 +12,7 @@
 #import "VSComponentRoute.h"
 #import "VSRegexRoute.h"
 
+
 @protocol VSRouterViewController
 
 @required
@@ -20,10 +21,17 @@
 
 @end
 
+
+typedef id (^MapperBlock) (VSRoute *route, NSDictionary *params);
+
 @interface VSRouter : NSObject
+
+@property (nonatomic, strong) MapperBlock mapper;// 可以使用自动转换器
 
 + (VSRouter *)sharedInstance;
 -(void)addRoute:(VSRoute *)route ;
 - (void)route:(NSString *)urlPattern;
 - (void)route:(NSString *)urlPattern withParams:(NSDictionary *)aParams;
+
+
 @end

@@ -10,6 +10,6 @@
 #import "VSRoute.h"
 @interface VSRegexRoute : VSRoute<VSRoute>
 
-- (id)initWithPattern:(NSString *)urlPattern map:(NSDictionary *)map handler:(BOOL (^)(NSDictionary *parameters))handler;
+- (id)initWithPattern:(NSString *)urlPattern map:(NSDictionary *)map handler:(BOOL (^)(VSRoute *route))handler;
 
 @end

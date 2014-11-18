@@ -27,7 +27,7 @@
 }
 
 - (void)testCompontRoute {
-    VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controller/:id" handler:^BOOL(NSDictionary *parameters) {
+    VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controller/:id" handler:^BOOL(VSRoute *route) {
 //        XCTAssert(YES, @"Pass");
         return YES;
     }];
@@ -45,7 +45,7 @@
 //}
 
 - (void)testRegexRoute {
-    VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"} handler:^BOOL(NSDictionary *parameters) {
+    VSRegexRoute *route = [[VSRegexRoute alloc] initWithPattern:@"/archive/(\\d+)/page/(\\d+)" map:@{[NSNumber numberWithInteger:0]:@"package", [NSNumber numberWithInteger:1]: @"page"} handler:^BOOL(VSRoute *route) {
         return YES;
     }];
     NSDictionary *params =  [route match:@"/archive/23232/page/12121"];

@@ -10,4 +10,11 @@
 
 @implementation TestModel
 
+- (NSSet *)propertiesForJson {
+    return [NSSet setWithObject:@"test"];
+}
+- (NSDictionary *)propertiesMap{
+    return @{@"test": @"test"};
+}
+
 @end

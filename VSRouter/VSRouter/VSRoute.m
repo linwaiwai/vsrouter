@@ -15,7 +15,7 @@
 
 @implementation VSRoute
 
-- (id)initWithPattern:(NSString *)urlPattern handler:(BOOL (^)(NSDictionary *parameters))handler{
+- (id)initWithPattern:(NSString *)urlPattern handler:(BOOL (^)(VSRoute *route))handler{
 
     if (self = [super init]) {
         _priority = 0;

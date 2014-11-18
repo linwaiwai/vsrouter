@@ -26,6 +26,8 @@ DECLARE_SINGLETON(VSRouter)
     return self;
 }
 
+
+
 - (void)route:(NSString *)urlPattern withParams:(NSDictionary *)aParams {
     NSString *scheme = nil;
     NSString *pattern = nil;
@@ -61,7 +63,12 @@ DECLARE_SINGLETON(VSRouter)
         
         if (route.handler) {
             route.matched = urlPattern;
-            if ( !route.handler(params)){
+            route.params = params;
+            if (self.mapper) {
+                id object = self.mapper(route, params);
+                route.object = object;
+            }
+            if ( !route.handler(route)){
                 continue;
             } else {
                 break;

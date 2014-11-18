@@ -19,7 +19,7 @@
 @implementation VSRegexRoute
 
 
-- (id)initWithPattern:(NSString *)urlPattern map:(NSDictionary *)aMap handler:(BOOL (^)(NSDictionary *parameters))handler{
+- (id)initWithPattern:(NSString *)urlPattern map:(NSDictionary *)aMap handler:(BOOL (^)(VSRoute *route))handler{
     if (self = [super initWithPattern:urlPattern handler:handler]) {
         self.map = aMap;
     }
