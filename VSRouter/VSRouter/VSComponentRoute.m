@@ -69,7 +69,7 @@ static BOOL shouldDecodePlusSymbols = YES;
     if (!self.patternPathComponents) {
         self.patternPathComponents = [[self.pattern pathComponents] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT SELF like '/'"]];
     }
-   
+    
     
     // do a quick component count check to quickly eliminate incorrect patterns
     BOOL componentCountEqual = self.patternPathComponents.count == URLComponents.count;
@@ -110,11 +110,13 @@ static BOOL shouldDecodePlusSymbols = YES;
         
         if (isMatch) {
             routeParameters = variables;
+        } else {
+            return nil;
         }
     }
     
-    return routeParameters;
- 
+    return  routeParameters;
+    
 }
 
 @end
