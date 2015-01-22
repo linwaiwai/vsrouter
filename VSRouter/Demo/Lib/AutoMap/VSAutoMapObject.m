@@ -117,8 +117,8 @@ static NSString const *CLASS_KEY = @"__class";
                 if (class && [[[self internalSupportFormat] allKeys] containsObject:class] ) {
                     // 使用内部函数
                     NSString *func =  [[self internalSupportFormat] objectForKey:class];
-                    
-                    id result = [self performSelector:NSSelectorFromString(func) withObject:value];
+                    SEL selector = NSSelectorFromString(func);
+                    id result =  ((id (*)(id, SEL))[self methodForSelector:selector])(self, selector);
                     if (result) {
                         [self setValue:result forKey:prop];
                     }

@@ -9,14 +9,12 @@
 #import "VSRoute.h"
 @interface VSRoute ()
 
-
-
 @end
 
 @implementation VSRoute
 
 - (id)initWithPattern:(NSString *)urlPattern handler:(BOOL (^)(VSRoute *route))handler{
-
+    
     if (self = [super init]) {
         _priority = 0;
         if ([urlPattern rangeOfString:@"://"].location != NSNotFound) {

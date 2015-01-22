@@ -10,6 +10,6 @@
 #import "VSRouter.h"
 
 
-@interface TestViewController : UIViewController<VSRouterViewController>
+@interface TestViewController : UIViewController
 
 @end

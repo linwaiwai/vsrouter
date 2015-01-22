@@ -10,9 +10,6 @@
 #import "AppDelegate.h"
 
 
-@interface TestViewController ()
-
-@end
 
 @implementation TestViewController
 

@@ -11,7 +11,7 @@
 @interface VSRegexRoute ()
 
 @property (nonatomic, retain) NSDictionary *map;
--(NSDictionary *)mappedValue ;
+//-(NSDictionary *)mappedValue ;
 
 @end
 
@@ -47,7 +47,7 @@
         }
     }
     
-
+    
     return  [self mappedValue:res];
 }
 
@@ -66,7 +66,7 @@
             
         }
         i++;
-   
+        
     }
     
     return result;
