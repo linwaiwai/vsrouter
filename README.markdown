@@ -4,6 +4,10 @@ VSRouter
 --------
 VSRouter ( gitlab.tools.vipshop.com/waiwai.lin/vsrouter) 是一个iOS路由器，参考了web设计中Router的设计，其提供了iOS中组件解耦一种方式。模块可以自己设计自己资源链接形式，注入Router中。如TestViewController中有：
 
+其使用场景有：
+1、提供了应用内部web页面和应用页面资源的相互调用方法。并且保证每个route是可插拔。
+2、提供应用间调用之后event dispatch的处理，每个route handle能够方便的插拔。
+
 + (void)load {
     VSComponentRoute *route = [[VSComponentRoute alloc] initWithPattern:@"/:controler/:action" handler:^BOOL(VSRoute *route) {
         TestViewController *testViewController = [[TestViewController alloc] init];
