@@ -2,7 +2,7 @@ VSRouter
 ========
 使用方法
 --------
-VSRouter ( gitlab.tools.vipshop.com/waiwai.lin/vsrouter) 是一个iOS路由器，参考了web设计中Router的设计，其提供了iOS中组件解耦一种方式。模块可以自己设计自己资源链接形式，注入Router中。如TestViewController中有：
+VSRouter ( https://github.com/linwaiwai/vsrouter) 是一个iOS路由器，参考了web设计中Router的设计，其提供了iOS中组件解耦一种方式。模块可以自己设计自己资源链接形式，注入Router中。如TestViewController中有：
 
 其使用场景有：
 1、提供了应用内部web页面和应用页面资源的相互调用方法。并且保证每个route是可插拔。
@@ -52,8 +52,7 @@ Web请求的处理
 }
 
 表示该controller将处理所有的所有http的请求。
-对老代码改造
-如特卖会中，有代码：
+对老代码改造，如有代码：
 
 - (void)openURLWithURLString:(NSString *)urlString {
     if (urlString != nil && ![urlString isEqualToString:@""]) {
@@ -72,7 +71,7 @@ Web请求的处理
                 goodListVC.pageEvent.parentPage=@"12";
                 goodListVC.parentPageSource=@"12";
                 [[VSRouteManager defaultManager] routeTo:[VSRouteTarget targetWithViewController:goodListVC
-                                                                                           class:_TabPage_PrimaryClass]];//在第一个tab里push
+                                                                                         h
             }];
         } else if ([self.urlString rangeOfString:GOODSDETAIL].length) {
             [[VSOpenURLManager sharedInstance] openURLWithURLString:self.urlString rangeString:GOODSDETAIL block:^(NSDictionary *paramDic) {
@@ -90,9 +89,7 @@ Web请求的处理
                 VSMerchandiseDetailViewController *merchandiseDetailViewController = [[[VSMerchandiseDetailViewController alloc] initWithMerchandiseId:goodsId brandId:brandId accessPath:accessPath] autorelease];
                 merchandiseDetailViewController.title = [goodsTitle stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                 VSPullController *pull=[[[VSPullController alloc] initWithRootViewController:merchandiseDetailViewController] autorelease];
-                [[VSRouteManager defaultManager] routeTo:[VSRouteTarget targetWithViewController:pull
-                                                                                           class:_TabPage_PrimaryClass]];
-                
+                [[VSRouteManager defaultManager] routeTo:[VSRouteTarget targetWithViewController:pull                                                                         
             }];
         }
     }
@@ -110,9 +107,7 @@ Web请求的处理
          goodListVC.title = [brandName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
          goodListVC.pageEvent.parentPage=@"12";
          goodListVC.parentPageSource=@"12";
-         [[VSRouteManager defaultManager] routeTo:[VSRouteTarget targetWithViewController:goodListVC 
-                                                                                           class:_TabPage_PrimaryClass]];//在第一个tab里push
- 
+         [[VSRouteManager defaultManager] routeTo:[VSRouteTarget targetWithViewController:goodListVC ]];
         return YES;
     }];
     [[VSRouter sharedInstance] addRoute:route];
